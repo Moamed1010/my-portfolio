@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Hassan Ali | Software Engineer & Senior Flutter Developer</title>
-    <meta name="description" content="Portfolio of Mohamed Hassan Ali - Software Engineer & Flutter Developer specializing in Clean Architecture, Real-Time Logistics, BLoC, and Scalable Mobile Ecosystems.">
+    <meta name="description" content="Portfolio of Mohamed Hassan Ali - Software Engineer & Flutter Developer specializing in Clean Architecture, Real-Time Systems, BLoC, and Production Mobile Platforms.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="image.png">
@@ -12,21 +12,22 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --bg-base: #090d16;
-            --bg-card: rgba(17, 24, 39, 0.7);
+            --bg-card: rgba(17, 24, 39, 0.72);
             --bg-card-hover: rgba(30, 41, 59, 0.85);
             --border-glass: rgba(255, 255, 255, 0.08);
-            --border-glass-accent: rgba(56, 189, 248, 0.3);
+            --border-glass-accent: rgba(56, 189, 248, 0.35);
             
             --cyan-400: #38bdf8;
             --cyan-500: #0ea5e9;
             --indigo-400: #818cf8;
             --indigo-500: #6366f1;
             --emerald-400: #34d399;
+            --amber-400: #fbbf24;
             
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
@@ -60,7 +61,6 @@
             background-attachment: fixed;
         }
 
-        /* Container */
         .container {
             width: 100%;
             max-width: 1200px;
@@ -75,7 +75,7 @@
             z-index: 100;
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            background: rgba(9, 13, 22, 0.8);
+            background: rgba(9, 13, 22, 0.85);
             border-bottom: 1px solid var(--border-glass);
             transition: var(--transition);
         }
@@ -164,6 +164,19 @@
             border-color: var(--cyan-400);
             color: var(--cyan-400);
             transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--cyan-400);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .btn-accent:hover {
+            background: var(--cyan-400);
+            color: #090d16;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
         }
 
         .btn-sm {
@@ -310,7 +323,7 @@
 
         .floating-badge {
             position: absolute;
-            background: rgba(15, 23, 42, 0.9);
+            background: rgba(15, 23, 42, 0.92);
             border: 1px solid var(--border-glass-accent);
             backdrop-filter: blur(12px);
             padding: 0.8rem 1.1rem;
@@ -600,26 +613,35 @@
             box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
         }
 
+        /* Featured Highlight Card */
+        .project-card.featured-card {
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.12);
+        }
+
         .project-badge-top {
             position: absolute;
             top: 14px;
             right: 14px;
             z-index: 10;
-            background: rgba(9, 13, 22, 0.85);
+            background: rgba(9, 13, 22, 0.88);
             border: 1px solid var(--border-glass-accent);
             color: var(--cyan-400);
-            padding: 0.25rem 0.75rem;
+            padding: 0.3rem 0.85rem;
             border-radius: var(--radius-full);
             font-size: 0.75rem;
             font-weight: 700;
             backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
         }
 
         .project-img-container {
             position: relative;
-            height: 220px;
+            height: 240px;
             overflow: hidden;
-            background: #111827;
+            background: #0b1120;
             border-bottom: 1px solid var(--border-glass);
         }
 
@@ -642,10 +664,26 @@
             object-fit: cover;
             scroll-snap-align: center;
             transition: transform 0.5s ease;
+            background-color: #0b1120;
         }
 
         .project-card:hover .project-img-slider img {
             transform: scale(1.03);
+        }
+
+        .slider-hint {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(6px);
+            color: var(--text-primary);
+            font-size: 0.72rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-full);
+            pointer-events: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .project-content {
@@ -656,7 +694,7 @@
         }
 
         .project-title {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 0.6rem;
@@ -677,14 +715,15 @@
             margin-bottom: 1.4rem;
             display: flex;
             flex-direction: column;
-            gap: 0.45rem;
+            gap: 0.55rem;
         }
 
         .project-highlights li {
-            font-size: 0.85rem;
+            font-size: 0.86rem;
             color: #cbd5e1;
             position: relative;
-            padding-left: 1.2rem;
+            padding-left: 1.3rem;
+            line-height: 1.5;
         }
 
         .project-highlights li::before {
@@ -698,7 +737,7 @@
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.45rem;
             margin-top: auto;
             padding-top: 1.2rem;
             border-top: 1px solid var(--border-glass);
@@ -708,17 +747,18 @@
             background: rgba(56, 189, 248, 0.08);
             color: var(--cyan-400);
             border: 1px solid rgba(56, 189, 248, 0.2);
-            font-size: 0.76rem;
+            font-size: 0.75rem;
             font-weight: 600;
             padding: 0.25rem 0.65rem;
             border-radius: var(--radius-full);
             font-family: 'JetBrains Mono', monospace;
         }
 
-        .project-links {
+        .project-actions {
             display: flex;
             gap: 0.8rem;
-            margin-top: 1.2rem;
+            margin-top: 1.4rem;
+            flex-wrap: wrap;
         }
 
         /* Skills Categorized Grid */
@@ -845,7 +885,7 @@
 
         /* Contact Section */
         .contact-card {
-            background: linear-gradient(135deg, rgba(17, 24, 39, 0.85), rgba(30, 41, 59, 0.7));
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.88), rgba(30, 41, 59, 0.72));
             border: 1px solid var(--border-glass-accent);
             border-radius: 28px;
             padding: 3.5rem 3rem;
@@ -966,6 +1006,163 @@
             transform: translateY(0);
         }
 
+        /* Fullscreen Lightbox / Gallery Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 8, 16, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-container {
+            width: 95%;
+            max-width: 1100px;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            background: rgba(17, 24, 39, 0.95);
+            border: 1px solid var(--border-glass-accent);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 1.8rem;
+            border-bottom: 1px solid var(--border-glass);
+            background: rgba(9, 13, 22, 0.7);
+        }
+
+        .modal-title-box h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .modal-title-box p {
+            font-size: 0.82rem;
+            color: var(--cyan-400);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .modal-close-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            color: var(--text-primary);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close-btn:hover {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        .modal-body {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 1.5rem;
+            overflow: hidden;
+            background: radial-gradient(circle at center, rgba(30, 41, 59, 0.5) 0%, #090d16 100%);
+        }
+
+        .modal-main-img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-glass-accent);
+            color: var(--text-primary);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .modal-nav-btn:hover {
+            background: var(--cyan-400);
+            color: #090d16;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+        }
+
+        .modal-prev-btn { left: 20px; }
+        .modal-next-btn { right: 20px; }
+
+        .modal-footer {
+            padding: 1rem 1.8rem;
+            border-top: 1px solid var(--border-glass);
+            background: rgba(9, 13, 22, 0.85);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            overflow-x: auto;
+            scrollbar-width: thin;
+        }
+
+        .modal-thumb {
+            width: 60px;
+            height: 75px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: var(--transition);
+            flex-shrink: 0;
+            background: #1e293b;
+        }
+
+        .modal-thumb:hover,
+        .modal-thumb.active {
+            opacity: 1;
+            border-color: var(--cyan-400);
+            transform: scale(1.08);
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+        }
+
         /* Footer */
         .footer {
             border-top: 1px solid var(--border-glass);
@@ -1042,6 +1239,12 @@
             .timeline-dot {
                 left: 1px;
             }
+            .modal-container {
+                height: 95vh;
+                width: 98%;
+            }
+            .modal-prev-btn { left: 8px; }
+            .modal-next-btn { right: 8px; }
         }
     </style>
 </head>
@@ -1049,6 +1252,37 @@
 
     <!-- Toast Notification -->
     <div id="toast">Copied to clipboard!</div>
+
+    <!-- UI Gallery Lightbox Modal -->
+    <div id="galleryModal" class="modal-overlay" onclick="closeModalOnOverlay(event)">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title-box">
+                    <h3 id="modalProjectTitle">Calibre 8 – UI & UX Showcase</h3>
+                    <p id="modalCounter">Screen 1 of 23</p>
+                </div>
+                <button class="modal-close-btn" onclick="closeGalleryModal()" title="Close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <button class="modal-nav-btn modal-prev-btn" onclick="prevModalImage()" title="Previous Screen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                
+                <img id="modalMainImg" src="clibrai8/117shots_so.png" alt="Screen Showcase" class="modal-main-img">
+                
+                <button class="modal-nav-btn modal-next-btn" onclick="nextModalImage()" title="Next Screen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+
+            <div class="modal-footer" id="modalThumbContainer">
+                <!-- Thumbnails will be injected dynamically by JavaScript -->
+            </div>
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -1087,7 +1321,7 @@
                         Hi, I'm <span class="text-gradient">Mohamed Hassan</span>
                     </h1>
                     <div class="hero-subtitle">
-                        Software Engineer | Flutter & Mobile Solutions Architect
+                        Software Engineer | Flutter Developer
                     </div>
                     <p class="hero-bio">
                         Passionate Mobile Application Developer based in Giza, Egypt, with a strong focus on <strong>Clean Architecture</strong>, robust state management (<strong>BLoC / Hydrated BLoC / Cubit</strong>), and real-time event-driven ecosystems. Experienced in architecting production-ready client & driver logistics apps, turn-by-turn road routing with SignalR, and modern interactive mobile experiences.
@@ -1249,10 +1483,60 @@
             </div>
 
             <div class="projects-grid">
-                
-                <!-- Project 1: Baridik Express Ecosystem -->
-                <div class="project-card" data-category="production">
-                    <div class="project-badge-top">Enterprise Ecosystem</div>
+
+                <!-- FEATURED PROJECT 1: Calibre 8 (With 23 High-Res Mockups & Gallery Modal) -->
+                <div class="project-card featured-card" data-category="ecommerce">
+                    <div class="project-badge-top">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <span>23 UI Screens • Production</span>
+                    </div>
+                    <div class="project-img-container">
+                        <div class="project-img-slider">
+                            <img src="clibrai8/117shots_so.png" alt="Calibre 8 Mockup 1">
+                            <img src="clibrai8/183shots_so.png" alt="Calibre 8 Mockup 2">
+                            <img src="clibrai8/290shots_so.png" alt="Calibre 8 Mockup 3">
+                            <img src="clibrai8/344shots_so.png" alt="Calibre 8 Mockup 4">
+                            <img src="clibrai8/525shots_so.png" alt="Calibre 8 Mockup 5">
+                            <img src="clibrai8/716shots_so.png" alt="Calibre 8 Mockup 6">
+                        </div>
+                        <div class="slider-hint">← Swipe to see screens →</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">
+                            <span>Calibre 8 – E-Commerce & Marketplace</span>
+                        </h3>
+                        <p class="project-desc">
+                            A production-grade mobile commerce and marketplace platform engineered with high performance, real-time interactive customer support chat, and offline state persistence.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Architected with a feature-rich E-Commerce platform with product catalogs, shopping cart, checkout workflows, and multi-language support (AR/EN).</li>
+                            <li>Built a real-time customer support chat featuring interactive voice notes with audio waveform visualization, media attachments, and Pusher channels.</li>
+                            <li>Optimized UX with Hydrated BLoC state persistence, Dio interceptors with automated retry logic, and in-app video/PDF preview capabilities.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">BLoC</span>
+                            <span class="tech-tag">Hydrated BLoC</span>
+                            <span class="tech-tag">Clean Architecture</span>
+                            <span class="tech-tag">Pusher Channels</span>
+                            <span class="tech-tag">Dio</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Just Audio</span>
+                            <span class="tech-tag">Audio Waveforms</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-accent btn-sm" onclick="openGalleryModal()">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                                <span>Preview All 23 UI Screens</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: Baridik Express Ecosystem -->
+                <div class="project-card featured-card" data-category="production">
+                    <div class="project-badge-top">Enterprise Logistics</div>
                     <div class="project-img-container">
                         <div class="project-img-slider">
                             <img src="Home Screen.jpg" alt="Baridik Express Ecosystem" onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop'">
@@ -1260,61 +1544,32 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
-                            <span>Baridik Express Ecosystem</span>
+                            <span>Baridik Express (Client & Driver Apps)</span>
                         </h3>
                         <p class="project-desc">
-                            End-to-end multi-lingual logistics platform (Client & Driver Apps) with full shipment lifecycle management, turn-by-turn navigation, and courier dispatch.
+                            End-to-end multi-lingual logistics platform with full shipment lifecycle management, turn-by-turn navigation, and courier dispatch.
                         </p>
                         <ul class="project-highlights">
-                            <li>Real-time GPS tracking via <strong>SignalR & Google Maps</strong> with vehicle heading rotation and OSRM polylines.</li>
-                            <li>Secure fulfillment: Camera barcode scanning, OTP verification, photo proof-of-delivery & digital signatures.</li>
-                            <li>Driver shift/earnings dashboard, FCM notifications, and automated JWT token refresh interceptors.</li>
+                            <li>Architected with an end-to-end logistics platform (Client & Driver apps) using Clean Architecture and BLoC for multi-lingual shipment lifecycle management.</li>
+                            <li>Engineered real-time live GPS tracking via SignalR & Google Maps, featuring car heading rotation, OSRM road polylines, and dynamic sender/receiver routing.</li>
+                            <li>Built secure fulfillment flows with camera barcode scanning, OTP verification, photo proof-of-delivery, and recipient digital signatures.</li>
+                            <li>Implemented driver shift/earnings dashboard, FCM push notifications, and Dio interceptors with automated JWT token refresh.</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
                             <span class="tech-tag">BLoC</span>
-                            <span class="tech-tag">Clean Arch</span>
-                            <span class="tech-tag">SignalR</span>
+                            <span class="tech-tag">Clean Architecture</span>
                             <span class="tech-tag">Google Maps</span>
+                            <span class="tech-tag">SignalR</span>
                             <span class="tech-tag">Dio</span>
+                            <span class="tech-tag">FCM</span>
                             <span class="tech-tag">Mobile Scanner</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2: Calibre 8 -->
-                <div class="project-card" data-category="ecommerce">
-                    <div class="project-badge-top">E-Commerce & Voice Chat</div>
-                    <div class="project-img-container">
-                        <div class="project-img-slider">
-                            <img src="home.png" alt="Calibre 8 App" onerror="this.src='https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=600&q=80'">
-                            <img src="my_cart.png" alt="Calibre 8 Cart">
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">
-                            <span>Calibre 8 – Marketplace & Chat</span>
-                        </h3>
-                        <p class="project-desc">
-                            Feature-rich E-Commerce & Marketplace application with advanced real-time customer support chat and state persistence.
-                        </p>
-                        <ul class="project-highlights">
-                            <li>Real-time chat with <strong>interactive voice notes</strong> and <strong>audio waveform visualization</strong> via Pusher channels.</li>
-                            <li>Offline state persistence powered by <strong>Hydrated BLoC</strong> and Dio interceptors with automated retry logic.</li>
-                            <li>In-app media, video, and PDF preview capabilities with multi-language (AR/EN) support.</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Hydrated BLoC</span>
-                            <span class="tech-tag">Pusher Channels</span>
-                            <span class="tech-tag">Just Audio</span>
-                            <span class="tech-tag">Waveforms</span>
-                            <span class="tech-tag">Dio</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: United Distributors App -->
+                <!-- PROJECT 3: United Distributors App -->
                 <div class="project-card" data-category="production">
                     <div class="project-badge-top">B2B Management</div>
                     <div class="project-img-container">
@@ -1324,29 +1579,31 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
-                            <span>United Distributors App</span>
+                            <span>United Distributors – Distribution App</span>
                         </h3>
                         <p class="project-desc">
                             Comprehensive B2B distribution management application enabling real-time order tracking, catalog inventory, and role-based access.
                         </p>
                         <ul class="project-highlights">
-                            <li>Architected with Clean Architecture and Cubit for high performance and testability.</li>
-                            <li>Local caching and offline-first persistence for uninterrupted field rep operations.</li>
+                            <li>Engineered a comprehensive B2B Distribution Management App for United Distributors using Flutter and Clean Architecture.</li>
+                            <li>Implemented core modules for real-time order tracking, inventory management, and role-based access.</li>
+                            <li>Utilized Cubit for state management and local caching strategies for offline support.</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
                             <span class="tech-tag">Clean Architecture</span>
                             <span class="tech-tag">Cubit</span>
                             <span class="tech-tag">Local Caching</span>
                             <span class="tech-tag">REST API</span>
                         </div>
-                        <div class="project-links">
+                        <div class="project-actions">
                             <a href="https://github.com/Moamed1010/united_distributors" target="_blank" class="btn btn-outline btn-sm">GitHub Repository</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 4: News App -->
+                <!-- PROJECT 4: News App -->
                 <div class="project-card" data-category="apps">
                     <div class="project-img-container">
                         <div class="project-img-slider">
@@ -1355,6 +1612,7 @@
                             <img src="details.png" alt="News Details">
                             <img src="Easy Localization.png" alt="Localization">
                         </div>
+                        <div class="slider-hint">← Swipe to see screens →</div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
@@ -1373,13 +1631,13 @@
                             <span class="tech-tag">Easy Localization</span>
                             <span class="tech-tag">Dio</span>
                         </div>
-                        <div class="project-links">
+                        <div class="project-actions">
                             <a href="https://github.com/Moamed1010/News-App" target="_blank" class="btn btn-outline btn-sm">GitHub Repository</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 5: Instagram UI Clone -->
+                <!-- PROJECT 5: Instagram UI Clone -->
                 <div class="project-card" data-category="apps">
                     <div class="project-img-container">
                         <div class="project-img-slider">
@@ -1388,6 +1646,7 @@
                             <img src="ins3.png" alt="Instagram Clone 3">
                             <img src="ins4.png" alt="Instagram Clone 4">
                         </div>
+                        <div class="slider-hint">← Swipe to see screens →</div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
@@ -1406,13 +1665,13 @@
                             <span class="tech-tag">BLoC</span>
                             <span class="tech-tag">Cloud Firestore</span>
                         </div>
-                        <div class="project-links">
+                        <div class="project-actions">
                             <a href="https://github.com/Moamed1010/instagram" target="_blank" class="btn btn-outline btn-sm">GitHub Repository</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 6: Restaurant Food Ordering -->
+                <!-- PROJECT 6: Restaurant Food Ordering -->
                 <div class="project-card" data-category="ecommerce">
                     <div class="project-img-container">
                         <div class="project-img-slider">
@@ -1420,6 +1679,7 @@
                             <img src="Meal Details Screen.jpg" alt="Meal Details">
                             <img src="Onboarding (1).png" alt="Onboarding">
                         </div>
+                        <div class="slider-hint">← Swipe to see screens →</div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
@@ -1430,14 +1690,14 @@
                         </p>
                         <ul class="project-highlights">
                             <li>Interactive meal customization, real-time cart recalculations, and checkout flows.</li>
-                            <li>Smooth micro-animations using custom widgets.</li>
+                            <li>Smooth micro-animations using custom widgets and Cubit state management.</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Flutter</span>
                             <span class="tech-tag">Cubit</span>
                             <span class="tech-tag">Custom Animations</span>
                         </div>
-                        <div class="project-links">
+                        <div class="project-actions">
                             <a href="https://github.com/Moamed1010/resturant" target="_blank" class="btn btn-outline btn-sm">GitHub Repository</a>
                         </div>
                     </div>
@@ -1462,15 +1722,16 @@
                         <div class="skill-box-icon">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                         </div>
-                        <h3 class="skill-box-title">Mobile Development</h3>
+                        <h3 class="skill-box-title">Flutter Development</h3>
                     </div>
                     <div class="skill-pill-list">
                         <span class="skill-pill">Flutter SDK</span>
                         <span class="skill-pill">Dart</span>
+                        <span class="skill-pill">Widgets & Custom Painters</span>
+                        <span class="skill-pill">Navigation & Go Router</span>
+                        <span class="skill-pill">Animations & Lottie</span>
                         <span class="skill-pill">Responsive UI</span>
                         <span class="skill-pill">Material Design</span>
-                        <span class="skill-pill">Custom Widgets</span>
-                        <span class="skill-pill">Lottie Animations</span>
                         <span class="skill-pill">Audio Waveforms</span>
                     </div>
                 </div>
@@ -1487,11 +1748,11 @@
                         <span class="skill-pill">Clean Architecture</span>
                         <span class="skill-pill">BLoC / Cubit</span>
                         <span class="skill-pill">Hydrated BLoC</span>
+                        <span class="skill-pill">Provider</span>
+                        <span class="skill-pill">GetIT (DI)</span>
                         <span class="skill-pill">SOLID Principles</span>
                         <span class="skill-pill">Design Patterns</span>
                         <span class="skill-pill">OOP</span>
-                        <span class="skill-pill">GetIT (DI)</span>
-                        <span class="skill-pill">Provider</span>
                     </div>
                 </div>
 
@@ -1501,15 +1762,16 @@
                         <div class="skill-box-icon">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
                         </div>
-                        <h3 class="skill-box-title">Real-Time & APIs</h3>
+                        <h3 class="skill-box-title">Real-Time & Networking</h3>
                     </div>
                     <div class="skill-pill-list">
                         <span class="skill-pill">SignalR Live Sync</span>
                         <span class="skill-pill">Pusher Channels</span>
                         <span class="skill-pill">RESTful APIs</span>
                         <span class="skill-pill">Dio Interceptors</span>
-                        <span class="skill-pill">JWT Token Refresh</span>
+                        <span class="skill-pill">Automated Token Refresh</span>
                         <span class="skill-pill">FCM Push Notifications</span>
+                        <span class="skill-pill">WebSockets</span>
                     </div>
                 </div>
 
@@ -1525,8 +1787,8 @@
                         <span class="skill-pill">Google Maps API</span>
                         <span class="skill-pill">OSRM Turn-by-Turn</span>
                         <span class="skill-pill">Live GPS Tracking</span>
-                        <span class="skill-pill">Heading Rotation</span>
-                        <span class="skill-pill">Barcode / Camera Scanner</span>
+                        <span class="skill-pill">Vehicle Heading Rotation</span>
+                        <span class="skill-pill">Mobile Barcode Scanner</span>
                         <span class="skill-pill">Digital Signatures</span>
                     </div>
                 </div>
@@ -1560,12 +1822,12 @@
                     <div class="skill-pill-list">
                         <span class="skill-pill">Unit Testing (flutter_test)</span>
                         <span class="skill-pill">Widget Testing</span>
+                        <span class="skill-pill">Dart</span>
                         <span class="skill-pill">C#</span>
                         <span class="skill-pill">Java</span>
                         <span class="skill-pill">C++</span>
                         <span class="skill-pill">PHP</span>
-                        <span class="skill-pill">Python</span>
-                        <span class="skill-pill">Git / GitHub</span>
+                        <span class="skill-pill">Git & GitHub</span>
                     </div>
                 </div>
 
@@ -1587,7 +1849,7 @@
                     <div class="edu-school">Ain Shams University, Cairo, Egypt</div>
                     <p class="edu-desc">
                         <strong>Graduation Project:</strong> Indoor Localization & Navigation System.<br>
-                        Developed a Flutter-based application providing real-time indoor positioning utilizing smartphone hardware sensors and advanced localization algorithms to solve navigation challenges in GPS-denied environments.
+                        Developed a Flutter-based application to provide real-time indoor positioning using smartphone hardware sensors and localization algorithms. This solution aims to solve navigation and routing challenges in GPS-denied environments.
                     </p>
                 </div>
 
@@ -1597,7 +1859,7 @@
                     <h3 class="edu-degree">Flutter Training Program</h3>
                     <div class="edu-school">IT SHARE</div>
                     <p class="edu-desc">
-                        Comprehensive professional program covering advanced Flutter development, Dart OOP, reactive state management, asynchronous data streams, and Clean Architecture design patterns.
+                        Intensive professional training program covering Flutter, Dart, custom widgets, state management, and enterprise application architecture.
                     </p>
                 </div>
             </div>
@@ -1676,8 +1938,112 @@
         </div>
     </footer>
 
-    <!-- Interactive Scripts -->
+    <!-- Interactive Scripts & Gallery Logic -->
     <script>
+        // Calibre 8 Gallery Images Array
+        const calibreImages = [
+            "clibrai8/117shots_so.png",
+            "clibrai8/151shots_so.png",
+            "clibrai8/183shots_so.png",
+            "clibrai8/290shots_so.png",
+            "clibrai8/338shots_so.png",
+            "clibrai8/344shots_so.png",
+            "clibrai8/449shots_so.png",
+            "clibrai8/525shots_so.png",
+            "clibrai8/529shots_so.png",
+            "clibrai8/579shots_so.png",
+            "clibrai8/590shots_so.png",
+            "clibrai8/624shots_so.png",
+            "clibrai8/678shots_so.png",
+            "clibrai8/680shots_so.png",
+            "clibrai8/694shots_so.png",
+            "clibrai8/716shots_so.png",
+            "clibrai8/757shots_so.png",
+            "clibrai8/813shots_so.png",
+            "clibrai8/830shots_so.png",
+            "clibrai8/864shots_so.png",
+            "clibrai8/879shots_so.png",
+            "clibrai8/920shots_so.png",
+            "clibrai8/945shots_so.png"
+        ];
+
+        let currentImgIndex = 0;
+
+        function openGalleryModal() {
+            const modal = document.getElementById('galleryModal');
+            const thumbContainer = document.getElementById('modalThumbContainer');
+            
+            // Build thumbnails
+            thumbContainer.innerHTML = '';
+            calibreImages.forEach((src, idx) => {
+                const thumb = document.createElement('img');
+                thumb.src = src;
+                thumb.className = 'modal-thumb' + (idx === 0 ? ' active' : '');
+                thumb.onclick = () => setModalImage(idx);
+                thumbContainer.appendChild(thumb);
+            });
+
+            currentImgIndex = 0;
+            updateModalView();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGalleryModal() {
+            const modal = document.getElementById('galleryModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeModalOnOverlay(e) {
+            if (e.target.id === 'galleryModal') {
+                closeGalleryModal();
+            }
+        }
+
+        function setModalImage(idx) {
+            currentImgIndex = idx;
+            updateModalView();
+        }
+
+        function nextModalImage() {
+            currentImgIndex = (currentImgIndex + 1) % calibreImages.length;
+            updateModalView();
+        }
+
+        function prevModalImage() {
+            currentImgIndex = (currentImgIndex - 1 + calibreImages.length) % calibreImages.length;
+            updateModalView();
+        }
+
+        function updateModalView() {
+            const mainImg = document.getElementById('modalMainImg');
+            const counter = document.getElementById('modalCounter');
+            const thumbs = document.querySelectorAll('.modal-thumb');
+
+            mainImg.src = calibreImages[currentImgIndex];
+            counter.textContent = `Screen ${currentImgIndex + 1} of ${calibreImages.length}`;
+
+            thumbs.forEach((th, i) => {
+                if (i === currentImgIndex) {
+                    th.classList.add('active');
+                    th.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                } else {
+                    th.classList.remove('active');
+                }
+            });
+        }
+
+        // Keyboard navigation for gallery
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('galleryModal');
+            if (modal.classList.contains('active')) {
+                if (e.key === 'ArrowRight') nextModalImage();
+                if (e.key === 'ArrowLeft') prevModalImage();
+                if (e.key === 'Escape') closeGalleryModal();
+            }
+        });
+
         // Project Filtering
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
