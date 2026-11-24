@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Hassan Ali | Software Engineer & Senior Flutter Developer</title>
+    <title>Mohamed Hassan Ali | Software Engineer & Flutter Developer</title>
     <meta name="description" content="Portfolio of Mohamed Hassan Ali - Software Engineer & Flutter Developer specializing in Clean Architecture, Real-Time Systems, BLoC, and Production Mobile Platforms.">
     
     <!-- Favicon -->
@@ -113,6 +113,47 @@
             gap: 1.8rem;
             list-style: none;
         }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--border-glass);
+            border-radius: 10px;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .menu-toggle:hover {
+            border-color: var(--cyan-400);
+            color: var(--cyan-400);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            list-style: none;
+            padding: 0.5rem 0 1rem;
+            gap: 0.2rem;
+        }
+
+        .mobile-menu .nav-link {
+            display: block;
+            padding: 0.7rem 0.4rem;
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .mobile-menu li:last-child .nav-link {
+            border-bottom: none;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
 
         .nav-link {
             color: var(--text-secondary);
@@ -937,6 +978,8 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            min-width: 0;
+            flex: 1;
         }
 
         .contact-item-icon {
@@ -962,9 +1005,11 @@
         .contact-item-text strong {
             font-size: 0.95rem;
             color: var(--text-primary);
+            overflow-wrap: anywhere;
         }
 
         .copy-btn {
+            flex-shrink: 0;
             background: none;
             border: none;
             color: var(--text-secondary);
@@ -1212,6 +1257,9 @@
             .nav-links {
                 display: none;
             }
+            .menu-toggle {
+                display: inline-flex;
+            }
             .hero-title {
                 font-size: 2.5rem;
             }
@@ -1299,10 +1347,23 @@
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <a href="MohamedHassanAli_CV.pdf" download="MohamedHassanAli_CV.pdf" class="btn btn-primary btn-sm">
+            <a href="CV.pdf" download="Mohamed Hassan Ali Mobile App Developer (Flutter).pdf" class="btn btn-primary btn-sm">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 <span>Download CV</span>
             </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+        <div class="container">
+            <ul class="mobile-menu" id="mobileMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -1327,7 +1388,7 @@
                         Passionate Mobile Application Developer based in Giza, Egypt, with a strong focus on <strong>Clean Architecture</strong>, robust state management (<strong>BLoC / Hydrated BLoC / Cubit</strong>), and real-time event-driven ecosystems. Experienced in architecting production-ready client & driver logistics apps, turn-by-turn road routing with SignalR, and modern interactive mobile experiences.
                     </p>
                     <div class="hero-actions">
-                        <a href="MohamedHassanAli_CV.pdf" download="MohamedHassanAli_CV.pdf" class="btn btn-primary">
+                        <a href="CV.pdf" download="Mohamed Hassan Ali Mobile App Developer (Flutter).pdf" class="btn btn-primary">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                             <span>Download Resume (CV)</span>
                         </a>
@@ -1386,8 +1447,8 @@
                     <div class="stat-label">Production Ecosystems</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-num">100%</div>
-                    <div class="stat-label">Clean Arch & BLoC</div>
+                    <div class="stat-num">6+</div>
+                    <div class="stat-label">Featured Projects</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-num">Real-Time</div>
@@ -1418,7 +1479,7 @@
                                 <h3 class="timeline-role">Flutter Developer</h3>
                                 <div class="timeline-company">Dr. Code Software Company</div>
                             </div>
-                            <span class="timeline-date">Aug 2026 – Present</span>
+                            <span class="timeline-date">May 2026 – Present</span>
                         </div>
                         <ul class="timeline-list">
                             <li>Architected, developed, and maintained production-ready logistics mobile applications (<strong>Client & Driver Apps</strong>) using Flutter, BLoC, and Clean Architecture.</li>
@@ -1801,7 +1862,7 @@
                         <span class="skill-pill">BLoC / Cubit</span>
                         <span class="skill-pill">Hydrated BLoC</span>
                         <span class="skill-pill">Provider</span>
-                        <span class="skill-pill">GetIT (DI)</span>
+                        <span class="skill-pill">GetIt (DI)</span>
                         <span class="skill-pill">SOLID Principles</span>
                         <span class="skill-pill">Design Patterns</span>
                         <span class="skill-pill">OOP</span>
@@ -1926,7 +1987,7 @@
                     <p>
                         I'm always open to discussing new mobile development opportunities, enterprise architecture challenges, and collaborations on production-grade Flutter platforms.
                     </p>
-                    <a href="MohamedHassanAli_CV.pdf" download="MohamedHassanAli_CV.pdf" class="btn btn-primary">
+                    <a href="CV.pdf" download="Mohamed Hassan Ali Mobile App Developer (Flutter).pdf" class="btn btn-primary">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         <span>Download Full CV (PDF)</span>
                     </a>
@@ -2188,6 +2249,23 @@
                 toast.classList.remove('show');
             }, 2500);
         }
+    </script>
+    <script>
+        (function () {
+            var toggle = document.getElementById('menuToggle');
+            var menu = document.getElementById('mobileMenu');
+            if (!toggle || !menu) return;
+            toggle.addEventListener('click', function () {
+                var open = menu.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    menu.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
     </script>
 </body>
 </html>
