@@ -661,10 +661,9 @@
         }
 
         .project-badge-top {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            z-index: 10;
+            position: static;
+            width: fit-content;
+            margin: 1rem 1.8rem 0;
             background: rgba(9, 13, 22, 0.88);
             border: 1px solid var(--border-glass-accent);
             color: var(--cyan-400);
@@ -680,7 +679,7 @@
 
         .project-img-container {
             position: relative;
-            height: 240px;
+            height: auto;
             overflow: hidden;
             background: #0b1120;
             border-bottom: 1px solid var(--border-glass);
@@ -690,7 +689,8 @@
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            height: 100%;
+            height: auto;
+            aspect-ratio: 3 / 2;
             scrollbar-width: none;
         }
 
@@ -708,25 +708,22 @@
             background-color: #0b1120;
         }
 
-        .project-img-slider img.cover-slide { object-fit: cover; background: #0b1120; }
+        .project-img-slider img.cover-slide { object-fit: contain; background: #0b1120; }
+        .project-card:hover .project-img-slider img.cover-slide { transform: none; }
 
         .project-card:hover .project-img-slider img {
             transform: scale(1.03);
         }
 
         .slider-hint {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.65);
-            backdrop-filter: blur(6px);
+            position: static;
+            text-align: center;
+            width: 100%;
+            background: #0b1120;
             color: var(--text-primary);
             font-size: 0.72rem;
-            padding: 0.2rem 0.6rem;
-            border-radius: var(--radius-full);
+            padding: 0.4rem 0.6rem;
             pointer-events: none;
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .project-content {
@@ -1355,7 +1352,7 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
             <div class="modal-header">
                 <div class="modal-title-box">
                     <h3 id="modalProjectTitle">Calibre 8 – UI & UX Showcase</h3>
-                    <p id="modalCounter">Screen 1 of 24</p>
+                    <p id="modalCounter">View 1 of 10</p>
                 </div>
                 <button class="modal-close-btn" onclick="closeGalleryModal()" title="Close">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -1367,7 +1364,7 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
                 </button>
                 
-                <img id="modalMainImg" src="clibrai8/117shots_so.png" alt="Screen Showcase" class="modal-main-img">
+                <img id="modalMainImg" src="clibrai8/117shots_so.png" alt="Screen Showcase" class="modal-main-img" style="cursor:zoom-in" onclick="openZoom()" title="Click for full-size view">
                 
                 <button class="modal-nav-btn modal-next-btn" onclick="nextModalImage()" title="Next Screen">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -1560,21 +1557,21 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
 
                 <!-- FEATURED PROJECT 1: Calibre 8 (With 24 High-Res Mockups & Gallery Modal) -->
                 <div class="project-card featured-card" data-category="ecommerce">
-                    <div class="project-badge-top">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <span>24 screens</span>
-                    </div>
                     <div class="project-img-container">
                         <div class="project-img-slider">
                             <img class="cover-slide" src="cover-calibre8.svg" alt="Calibre 8 overview">
-                            <img src="clibrai8/117shots_so.png" alt="Calibre 8 Mockup 1" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/clibrai8/117shots_so.png';}">
-                            <img src="clibrai8/183shots_so.png" alt="Calibre 8 Mockup 2" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/clibrai8/183shots_so.png';}">
-                            <img src="clibrai8/290shots_so.png" alt="Calibre 8 Mockup 3" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/clibrai8/290shots_so.png';}">
-                            <img src="clibrai8/344shots_so.png" alt="Calibre 8 Mockup 4" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/clibrai8/344shots_so.png';}">
-                            <img src="clibrai8/525shots_so.png" alt="Calibre 8 Mockup 5" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/clibrai8/525shots_so.png';}">
-                            <img src="clibrai8/716shots_so.png" alt="Calibre 8 Mockup 6" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/clibrai8/716shots_so.png';}">
+                            <img class="cover-slide" src="gal-calibre8/calibre8-01.svg" alt="Calibre 8 screens 1" loading="lazy">
+                            <img class="cover-slide" src="gal-calibre8/calibre8-02.svg" alt="Calibre 8 screens 2" loading="lazy">
+                            <img class="cover-slide" src="gal-calibre8/calibre8-03.svg" alt="Calibre 8 screens 3" loading="lazy">
+                            <img class="cover-slide" src="gal-calibre8/calibre8-04.svg" alt="Calibre 8 screens 4" loading="lazy">
+                            <img class="cover-slide" src="gal-calibre8/calibre8-05.svg" alt="Calibre 8 screens 5" loading="lazy">
+                            <img class="cover-slide" src="gal-calibre8/calibre8-06.svg" alt="Calibre 8 screens 6" loading="lazy">
                         </div>
                         <div class="slider-hint">← Swipe to see screens →</div>
+                    </div>
+                    <div class="project-badge-top">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <span>30 screens</span>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
@@ -1603,7 +1600,7 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
                         <div class="project-actions">
                             <button class="btn btn-accent btn-sm" onclick="openGalleryModal('calibre8')">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                                <span>View all 24 screens</span>
+                                <span>View all 30 screens</span>
                             </button>
                         </div>
                     </div>
@@ -1611,21 +1608,21 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
 
                 <!-- PROJECT 2: Baridik Express Ecosystem -->
                 <div class="project-card featured-card" data-category="production">
-                    <div class="project-badge-top">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <span>22 screens</span>
-                    </div>
                     <div class="project-img-container">
                         <div class="project-img-slider">
                             <img class="cover-slide" src="cover-baridak.svg" alt="Baridik Express overview">
-                            <img src="baridak/124shots_so.png" alt="Baridik Express Mockup 1" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/baridak/124shots_so.png';}">
-                            <img src="baridak/174shots_so.png" alt="Baridik Express Mockup 2" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/baridak/174shots_so.png';}">
-                            <img src="baridak/283shots_so.png" alt="Baridik Express Mockup 3" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/baridak/283shots_so.png';}">
-                            <img src="baridak/352shots_so.png" alt="Baridik Express Mockup 4" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/baridak/352shots_so.png';}">
-                            <img src="baridak/495shots_so.png" alt="Baridik Express Mockup 5" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/baridak/495shots_so.png';}">
-                            <img src="baridak/714shots_so.png" alt="Baridik Express Mockup 6" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/baridak/714shots_so.png';}">
+                            <img class="cover-slide" src="gal-baridak/baridak-01.svg" alt="Baridik Express screens 1" loading="lazy">
+                            <img class="cover-slide" src="gal-baridak/baridak-02.svg" alt="Baridik Express screens 2" loading="lazy">
+                            <img class="cover-slide" src="gal-baridak/baridak-03.svg" alt="Baridik Express screens 3" loading="lazy">
+                            <img class="cover-slide" src="gal-baridak/baridak-04.svg" alt="Baridik Express screens 4" loading="lazy">
+                            <img class="cover-slide" src="gal-baridak/baridak-05.svg" alt="Baridik Express screens 5" loading="lazy">
+                            <img class="cover-slide" src="gal-baridak/baridak-06.svg" alt="Baridik Express screens 6" loading="lazy">
                         </div>
                         <div class="slider-hint">← Swipe to see screens →</div>
+                    </div>
+                    <div class="project-badge-top">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <span>30 screens</span>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
@@ -1654,7 +1651,7 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
                         <div class="project-actions">
                             <button class="btn btn-accent btn-sm" onclick="openGalleryModal('baridak')">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                                <span>View all 22 screens</span>
+                                <span>View all 30 screens</span>
                             </button>
                         </div>
                     </div>
@@ -1662,12 +1659,12 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
 
                 <!-- PROJECT 3: United Distributors App -->
                 <div class="project-card" data-category="production">
-                    <div class="project-badge-top">B2B</div>
                     <div class="project-img-container">
                         <div class="project-img-slider">
                             <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop" alt="United Distributors App">
                         </div>
                     </div>
+                    <div class="project-badge-top">B2B</div>
                     <div class="project-content">
                         <h3 class="project-title">
                             <span>United Distributors: Distribution App</span>
@@ -1699,10 +1696,8 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
                     <div class="project-img-container">
                         <div class="project-img-slider">
                             <img class="cover-slide" src="cover-news.svg" alt="News App overview">
-                            <img src="newshome.png" alt="News Home">
-                            <img src="search.png" alt="News Search">
-                            <img src="details.png" alt="News Details">
-                            <img src="Easy Localization.png" alt="Localization">
+                            <img class="cover-slide" src="gal-news/news-01.svg" alt="News App screens 1" loading="lazy">
+                            <img class="cover-slide" src="gal-news/news-02.svg" alt="News App screens 2" loading="lazy">
                         </div>
                         <div class="slider-hint">← Swipe to see screens →</div>
                     </div>
@@ -1734,10 +1729,8 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
                     <div class="project-img-container">
                         <div class="project-img-slider">
                             <img class="cover-slide" src="cover-instagram.svg" alt="Instagram Clone overview">
-                            <img src="ins1.png" alt="Instagram Clone 1">
-                            <img src="ins2.png" alt="Instagram Clone 2">
-                            <img src="ins3.png" alt="Instagram Clone 3">
-                            <img src="ins4.png" alt="Instagram Clone 4">
+                            <img class="cover-slide" src="gal-instagram/instagram-01.svg" alt="Instagram Clone screens 1" loading="lazy">
+                            <img class="cover-slide" src="gal-instagram/instagram-02.svg" alt="Instagram Clone screens 2" loading="lazy">
                         </div>
                         <div class="slider-hint">← Swipe to see screens →</div>
                     </div>
@@ -1769,9 +1762,8 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
                     <div class="project-img-container">
                         <div class="project-img-slider">
                             <img class="cover-slide" src="cover-restaurant.svg" alt="Restaurant App overview">
-                            <img src="Home Screen.jpg" alt="Restaurant Home">
-                            <img src="Meal Details Screen.jpg" alt="Meal Details">
-                            <img src="Onboarding (1).png" alt="Onboarding">
+                            <img class="cover-slide" src="gal-restaurant/restaurant-01.svg" alt="Restaurant App screens 1" loading="lazy">
+                            <img class="cover-slide" src="gal-restaurant/restaurant-02.svg" alt="Restaurant App screens 2" loading="lazy">
                         </div>
                         <div class="slider-hint">← Swipe to see screens →</div>
                     </div>
@@ -1802,12 +1794,8 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
                     <div class="project-img-container">
                         <div class="project-img-slider">
                             <img class="cover-slide" src="cover-ecommerce.svg" alt="E-Commerce App overview">
-                            <img src="home.png" alt="E-Commerce Home" onerror="this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/home.png'">
-                            <img src="register.png" alt="Register" onerror="this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/register.png'">
-                            <img src="login.png" alt="Login" onerror="this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/login.png'">
-                            <img src="dilaog.png" alt="Dialog" onerror="this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/dilaog.png'">
-                            <img src="my_cart.png" alt="My Cart" onerror="this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/my_cart.png'">
-                            <img src="account.png" alt="Account" onerror="this.src='https://raw.githubusercontent.com/Moamed1010/my-portfolio/main/account.png'">
+                            <img class="cover-slide" src="gal-ecommerce/ecommerce-01.svg" alt="E-Commerce App screens 1" loading="lazy">
+                            <img class="cover-slide" src="gal-ecommerce/ecommerce-02.svg" alt="E-Commerce App screens 2" loading="lazy">
                         </div>
                         <div class="slider-hint">← Swipe to see screens →</div>
                     </div>
@@ -2076,57 +2064,31 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
             calibre8: {
                 title: "Calibre 8 – UI & UX Showcase",
                 images: [
-                    "clibrai8/117shots_so.png",
-                    "clibrai8/151shots_so.png",
-                    "clibrai8/183shots_so.png",
-                    "clibrai8/290shots_so.png",
-                    "clibrai8/338shots_so.png",
-                    "clibrai8/344shots_so.png",
-                    "clibrai8/449shots_so.png",
-                    "clibrai8/525shots_so.png",
-                    "clibrai8/529shots_so.png",
-                    "clibrai8/579shots_so.png",
-                    "clibrai8/590shots_so.png",
-                    "clibrai8/624shots_so.png",
-                    "clibrai8/62shots_so.png",
-                    "clibrai8/678shots_so.png",
-                    "clibrai8/680shots_so.png",
-                    "clibrai8/694shots_so.png",
-                    "clibrai8/716shots_so.png",
-                    "clibrai8/757shots_so.png",
-                    "clibrai8/813shots_so.png",
-                    "clibrai8/830shots_so.png",
-                    "clibrai8/864shots_so.png",
-                    "clibrai8/879shots_so.png",
-                    "clibrai8/920shots_so.png",
-                    "clibrai8/945shots_so.png"
+                    "gal-calibre8/calibre8-01.svg",
+                    "gal-calibre8/calibre8-02.svg",
+                    "gal-calibre8/calibre8-03.svg",
+                    "gal-calibre8/calibre8-04.svg",
+                    "gal-calibre8/calibre8-05.svg",
+                    "gal-calibre8/calibre8-06.svg",
+                    "gal-calibre8/calibre8-07.svg",
+                    "gal-calibre8/calibre8-08.svg",
+                    "gal-calibre8/calibre8-09.svg",
+                    "gal-calibre8/calibre8-10.svg"
                 ]
             },
             baridak: {
                 title: "Baridik Express – Logistics UI Showcase",
                 images: [
-                    "baridak/124shots_so.png",
-                    "baridak/12shots_so.png",
-                    "baridak/174shots_so.png",
-                    "baridak/182shots_so.png",
-                    "baridak/283shots_so.png",
-                    "baridak/323shots_so.png",
-                    "baridak/338shots_so.png",
-                    "baridak/352shots_so.png",
-                    "baridak/382shots_so.png",
-                    "baridak/481shots_so (1).png",
-                    "baridak/481shots_so.png",
-                    "baridak/495shots_so.png",
-                    "baridak/540shots_so.png",
-                    "baridak/561shots_so.png",
-                    "baridak/680shots_so.png",
-                    "baridak/695shots_so.png",
-                    "baridak/714shots_so.png",
-                    "baridak/748shots_so.png",
-                    "baridak/760shots_so.png",
-                    "baridak/851shots_so.png",
-                    "baridak/853shots_so.png",
-                    "baridak/927shots_so.png"
+                    "gal-baridak/baridak-01.svg",
+                    "gal-baridak/baridak-02.svg",
+                    "gal-baridak/baridak-03.svg",
+                    "gal-baridak/baridak-04.svg",
+                    "gal-baridak/baridak-05.svg",
+                    "gal-baridak/baridak-06.svg",
+                    "gal-baridak/baridak-07.svg",
+                    "gal-baridak/baridak-08.svg",
+                    "gal-baridak/baridak-09.svg",
+                    "gal-baridak/baridak-10.svg"
                 ]
             }
         };
@@ -2147,7 +2109,8 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
             thumbContainer.innerHTML = '';
             gallery.images.forEach((src, idx) => {
                 const thumb = document.createElement('img');
-                thumb.src = src;
+                thumb.src = src.replace('.svg', '-thumb.svg');
+                thumb.loading = 'lazy';
                 thumb.onerror = function() {
                     if (!this.dataset.tried) {
                         this.dataset.tried = '1';
@@ -2207,7 +2170,7 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
                 }
             };
             mainImg.src = gallery.images[currentImgIndex];
-            counter.textContent = `Screen ${currentImgIndex + 1} of ${gallery.images.length}`;
+            counter.textContent = `View ${currentImgIndex + 1} of ${gallery.images.length}`;
 
             thumbs.forEach((th, i) => {
                 if (i === currentImgIndex) {
@@ -2285,5 +2248,10 @@ body{background-image:none;background-color:var(--bg-base);line-height:1.7}
             });
         })();
     </script>
-</body>
+<div id="zoomView" onclick="closeZoom()" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(5,8,16,.97);align-items:center;justify-content:center;cursor:zoom-out"><img id="zoomImg" style="max-width:100vw;max-height:100vh;object-fit:contain" alt="Full-size view"></div>
+<script>
+function openZoom(){const z=document.getElementById('zoomView');document.getElementById('zoomImg').src=document.getElementById('modalMainImg').src;z.style.display='flex';}
+function closeZoom(){document.getElementById('zoomView').style.display='none';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZoom();},true);
+</script></body>
 </html>
