@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Hassan Ali | Software Engineer & Flutter Developer</title>
-    <meta name="description" content="Portfolio of Mohamed Hassan Ali - Software Engineer & Flutter Developer specializing in Clean Architecture, Real-Time Systems, BLoC, and Production Mobile Platforms.">
+    <meta name="description" content="Portfolio of Mohamed Hassan Ali, a Flutter developer in Giza, Egypt. Mobile apps built with Flutter, BLoC and Clean Architecture.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="image.png">
@@ -1294,7 +1294,53 @@
             .modal-prev-btn { left: 8px; }
             .modal-next-btn { right: 8px; }
         }
-    </style>
+    
+/* ===== Restrained polish ===== */
+:root{--bg-base:#0e1116;--bg-card:#151a21;--bg-card-hover:#1a2029;--border-glass:#262d37;--border-glass-accent:#2f3945;
+--cyan-400:#7cb4e8;--cyan-500:#5a9bd8;--indigo-400:#7cb4e8;--indigo-500:#5a9bd8;--text-primary:#e8ebef;--text-secondary:#9aa4b0;--text-muted:#6f7a87;
+--glass-shadow:none;--glow-cyan:none;--radius-md:8px;--radius-lg:10px;--radius-full:8px;--transition:all .15s ease}
+body{background-image:none;background-color:var(--bg-base);line-height:1.7}
+*{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.navbar{background:var(--bg-base)}
+.nav-logo-badge{background:var(--cyan-500);border-radius:6px}
+.btn{font-weight:500}
+.btn-primary{background:var(--cyan-500);box-shadow:none;color:#0b1017}
+.btn-primary:hover,.btn-outline:hover,.btn-accent:hover{transform:none;box-shadow:none}
+.btn-primary:hover{background:var(--cyan-400)}
+.btn-accent{background:transparent;border:1px solid var(--border-glass-accent);color:var(--text-primary)}
+.btn-accent:hover{background:var(--bg-card-hover);color:var(--text-primary)}
+.hero{padding:4.5rem 0 2rem}
+.hero-title{font-size:2.8rem;font-weight:700;letter-spacing:-1px}
+.hero-subtitle{color:var(--cyan-400)}
+.hero-bio{font-size:1rem;max-width:560px}
+.hero-bio strong{font-weight:inherit;color:inherit}
+.profile-card{border-radius:12px;padding:.5rem;box-shadow:none;background:var(--bg-card)}
+.profile-card img{border-radius:8px;border:none}
+.stats-bar{grid-template-columns:repeat(3,1fr);padding:1.4rem 1.8rem;margin:3rem 0 3rem}
+.stat-num{font-size:1rem!important;font-weight:600!important;background:none!important;-webkit-text-fill-color:var(--text-primary)!important;color:var(--text-primary)!important;line-height:1.4}
+.stat-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:.2rem}
+.section{padding:3.5rem 0}
+.section-header{text-align:left;margin-bottom:2rem}
+.section-title{font-size:1.7rem;font-weight:700;letter-spacing:-.4px}
+.timeline-body,.timeline-card .timeline-body{box-shadow:none}
+.timeline-dot{box-shadow:none!important}
+.project-card,.skill-box,.edu-card,.contact-card,.timeline-body{box-shadow:none!important;background:var(--bg-card)}
+.project-card:hover,.skill-box:hover,.edu-card:hover{transform:none!important;box-shadow:none!important;border-color:var(--border-glass-accent)}
+.project-badge-top{background:var(--bg-base);border:1px solid var(--border-glass);color:var(--text-secondary);font-weight:500;border-radius:6px}
+.tech-tag,.skill-pill{background:transparent!important;border:1px solid var(--border-glass)!important;color:var(--text-secondary)!important;border-radius:6px!important;font-weight:500}
+.skill-box-icon{background:none!important;box-shadow:none!important}
+.filter-btn{border-radius:6px;font-weight:500}
+.filter-btn.active{background:var(--cyan-500)!important;color:#0b1017!important;border-color:var(--cyan-500)!important;box-shadow:none!important}
+.contact-card{background:var(--bg-card);border-radius:12px;padding:2.5rem}
+.contact-info h3{font-size:1.5rem;margin-bottom:.6rem}
+.footer{border-top:1px solid var(--border-glass)}
+*,*::before,*::after{animation:none!important}
+@media(max-width:768px){.hero{padding:2.5rem 0 1rem}.hero-title{font-size:2.2rem}.stats-bar{grid-template-columns:1fr;gap:1rem}.section{padding:2.5rem 0}.contact-card{padding:1.5rem}}
+.stat-num,.timeline-date,.edu-date{font-family:'Plus Jakarta Sans',sans-serif!important}
+.timeline-date,.edu-date{background:none!important;border:none!important;color:var(--text-muted)!important;padding:0!important;font-size:.88rem}
+.nav-logo{white-space:nowrap}
+@media(max-width:768px){.nav-content>.btn{display:none}.hero-subtitle{font-size:1.05rem}}
+</style>
 </head>
 <body>
 
@@ -1374,26 +1420,22 @@
         <section id="about" class="hero">
             <div class="hero-grid">
                 <div class="hero-text">
-                    <div class="badge-status">
-                        <span class="status-dot"></span>
-                        <span>Available for High-Impact Mobile Engineering Roles</span>
-                    </div>
                     <h1 class="hero-title">
-                        Hi, I'm <span class="text-gradient">Mohamed Hassan</span>
+                        Mohamed Hassan
                     </h1>
                     <div class="hero-subtitle">
                         Software Engineer | Flutter Developer
                     </div>
                     <p class="hero-bio">
-                        Passionate Mobile Application Developer based in Giza, Egypt, with a strong focus on <strong>Clean Architecture</strong>, robust state management (<strong>BLoC / Hydrated BLoC / Cubit</strong>), and real-time event-driven ecosystems. Experienced in architecting production-ready client & driver logistics apps, turn-by-turn road routing with SignalR, and modern interactive mobile experiences.
+                        I'm a Flutter developer based in Giza, Egypt. I build mobile apps with BLoC and Clean Architecture. At Dr. Code I work on logistics apps for clients and drivers, including live GPS tracking with SignalR. I studied Computer and Information Sciences at Ain Shams University.
                     </p>
                     <div class="hero-actions">
                         <a href="CV.pdf" download="Mohamed Hassan Ali Mobile App Developer (Flutter).pdf" class="btn btn-primary">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                            <span>Download Resume (CV)</span>
+                            <span>Download CV</span>
                         </a>
                         <a href="#projects" class="btn btn-outline">
-                            <span>Explore Projects</span>
+                            <span>View Projects</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                         </a>
                     </div>
@@ -1417,56 +1459,26 @@
                     <div class="profile-card">
                         <img src="profile.jpeg" alt="Mohamed Hassan Ali" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'">
                         
-                        <div class="floating-badge floating-badge-1">
-                            <div class="badge-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                            </div>
-                            <div class="badge-info">
-                                <h4>Clean Architecture</h4>
-                                <p>BLoC & SOLID Pattern</p>
-                            </div>
-                        </div>
+                        
 
-                        <div class="floating-badge floating-badge-2">
-                            <div class="badge-icon" style="background: rgba(99, 102, 241, 0.15); color: var(--indigo-400);">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                            </div>
-                            <div class="badge-info">
-                                <h4>Real-Time Sync</h4>
-                                <p>SignalR & Pusher Live</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
 
             <!-- Stats Bar -->
             <div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-num">2+</div>
-                    <div class="stat-label">Production Ecosystems</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">6+</div>
-                    <div class="stat-label">Featured Projects</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">Real-Time</div>
-                    <div class="stat-label">GPS Tracking & SignalR</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-num">Quality</div>
-                    <div class="stat-label">Unit & Widget Tested</div>
-                </div>
+                <div class="stat-item"><div class="stat-label">Current role</div><div class="stat-num">Flutter Developer, Dr. Code</div></div>
+                <div class="stat-item"><div class="stat-label">Main stack</div><div class="stat-num">Flutter, Dart, BLoC</div></div>
+                <div class="stat-item"><div class="stat-label">Based in</div><div class="stat-num">Giza, Egypt</div></div>
             </div>
         </section>
 
         <!-- Experience Section -->
         <section id="experience" class="section">
             <div class="section-header">
-                <span class="section-tag">Career Path</span>
-                <h2 class="section-title">Work Experience</h2>
-                <p class="section-subtitle">Demonstrated record in building production-ready enterprise mobile applications, logistics software, and scalable state management.</p>
+                
+                <h2 class="section-title">Experience</h2>
             </div>
 
             <div class="timeline">
@@ -1482,9 +1494,9 @@
                             <span class="timeline-date">May 2026 – Present</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Architected, developed, and maintained production-ready logistics mobile applications (<strong>Client & Driver Apps</strong>) using Flutter, BLoC, and Clean Architecture.</li>
-                            <li>Implemented <strong>real-time GPS live tracking</strong>, OSRM turn-by-turn road routing, vehicle heading rotation, and <strong>SignalR live synchronization</strong> for courier dispatch.</li>
-                            <li>Integrated camera barcode scanners, OTP verification, FCM push notifications, and Dio interceptors with automated JWT token refresh logic.</li>
+                            <li>Developed and maintained logistics mobile apps (client and driver) using Flutter, BLoC and Clean Architecture.</li>
+                            <li>Built live GPS tracking, OSRM road routing, vehicle heading rotation and SignalR sync for courier dispatch.</li>
+                            <li>Added barcode scanning, OTP verification, FCM push notifications and Dio interceptors with automatic JWT refresh.</li>
                         </ul>
                     </div>
                 </div>
@@ -1501,9 +1513,9 @@
                             <span class="timeline-date">Sep 2025 – Jan 2026</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Engineered B2B Distribution Management solutions utilizing Flutter, Dart, Clean Architecture, and Cubit for scalable state management.</li>
-                            <li>Implemented local caching mechanisms and offline persistence strategies for seamless field operations.</li>
-                            <li>Integrated RESTful APIs, Firebase backend services, and managed team collaborative version control workflows with Git and GitHub.</li>
+                            <li>Built a B2B distribution management app with Flutter, Dart, Clean Architecture and Cubit.</li>
+                            <li>Added local caching so the app keeps working offline.</li>
+                            <li>Connected REST APIs and Firebase, and worked in a team with Git and GitHub.</li>
                         </ul>
                     </div>
                 </div>
@@ -1520,7 +1532,7 @@
                             <span class="timeline-date">Jul 2022 – Aug 2022</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Trained intensively in native Android application development utilizing Java, Object-Oriented Programming (OOP) principles, MySQL, and Firebase integrations.</li>
+                            <li>Training in native Android development with Java, OOP, MySQL and Firebase.</li>
                         </ul>
                     </div>
                 </div>
@@ -1530,17 +1542,16 @@
         <!-- Projects Section -->
         <section id="projects" class="section">
             <div class="section-header">
-                <span class="section-tag">Portfolio Showcase</span>
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Real-world production platforms, logistics tracking systems, and feature-rich cross-platform applications.</p>
+                
+                <h2 class="section-title">Projects</h2>
             </div>
 
             <!-- Filter Tabs -->
             <div class="filter-tabs">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="production">Production & Logistics</button>
-                <button class="filter-btn" data-filter="ecommerce">E-Commerce & Chat</button>
-                <button class="filter-btn" data-filter="apps">Mobile Apps</button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="production">Work</button>
+                <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+                <button class="filter-btn" data-filter="apps">Practice Apps</button>
             </div>
 
             <div class="projects-grid">
@@ -1549,7 +1560,7 @@
                 <div class="project-card featured-card" data-category="ecommerce">
                     <div class="project-badge-top">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <span>24 UI Screens • Production</span>
+                        <span>24 screens</span>
                     </div>
                     <div class="project-img-container">
                         <div class="project-img-slider">
@@ -1564,15 +1575,15 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
-                            <span>Calibre 8 – E-Commerce & Marketplace</span>
+                            <span>Calibre 8: E-Commerce & Marketplace</span>
                         </h3>
                         <p class="project-desc">
-                            A production-grade mobile commerce and marketplace platform engineered with high performance, real-time interactive customer support chat, and offline state persistence.
+                            A mobile shopping app with a catalog, cart, checkout, and a live support chat.
                         </p>
                         <ul class="project-highlights">
-                            <li>Architected with a feature-rich E-Commerce platform with product catalogs, shopping cart, checkout workflows, and multi-language support (AR/EN).</li>
-                            <li>Built a real-time customer support chat featuring interactive voice notes with audio waveform visualization, media attachments, and Pusher channels.</li>
-                            <li>Optimized UX with Hydrated BLoC state persistence, Dio interceptors with automated retry logic, and in-app video/PDF preview capabilities.</li>
+                            <li>Product catalog, cart and checkout, in Arabic and English.</li>
+                            <li>Support chat over Pusher, with voice notes (with waveforms) and media attachments.</li>
+                            <li>Hydrated BLoC to keep state, Dio interceptors with retry, and in-app video and PDF preview.</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Flutter</span>
@@ -1589,7 +1600,7 @@
                         <div class="project-actions">
                             <button class="btn btn-accent btn-sm" onclick="openGalleryModal('calibre8')">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                                <span>Preview All 24 UI Screens</span>
+                                <span>View all 24 screens</span>
                             </button>
                         </div>
                     </div>
@@ -1599,7 +1610,7 @@
                 <div class="project-card featured-card" data-category="production">
                     <div class="project-badge-top">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <span>22 UI Screens • Production Ecosystem</span>
+                        <span>22 screens</span>
                     </div>
                     <div class="project-img-container">
                         <div class="project-img-slider">
@@ -1617,13 +1628,13 @@
                             <span>Baridik Express (Client & Driver Apps)</span>
                         </h3>
                         <p class="project-desc">
-                            End-to-end multi-lingual logistics platform with full shipment lifecycle management, turn-by-turn navigation, and courier dispatch.
+                            Client and driver apps for shipping: creating a shipment, dispatching it to a courier and tracking it to delivery.
                         </p>
                         <ul class="project-highlights">
-                            <li>Architected with an end-to-end logistics platform (Client & Driver apps) using Clean Architecture and BLoC for multi-lingual shipment lifecycle management.</li>
-                            <li>Engineered real-time live GPS tracking via SignalR & Google Maps, featuring car heading rotation, OSRM road polylines, and dynamic sender/receiver routing.</li>
-                            <li>Built secure fulfillment flows with camera barcode scanning, OTP verification, photo proof-of-delivery, and recipient digital signatures.</li>
-                            <li>Implemented driver shift/earnings dashboard, FCM push notifications, and Dio interceptors with automated JWT token refresh.</li>
+                            <li>Client and driver apps built with Clean Architecture and BLoC, in multiple languages.</li>
+                            <li>Live GPS tracking with SignalR and Google Maps, including heading rotation and OSRM road routes.</li>
+                            <li>Delivery flow with barcode scanning, OTP verification, photo proof and recipient signature.</li>
+                            <li>Driver shift and earnings screen, FCM push notifications, and automatic JWT refresh.</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Flutter</span>
@@ -1639,7 +1650,7 @@
                         <div class="project-actions">
                             <button class="btn btn-accent btn-sm" onclick="openGalleryModal('baridak')">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                                <span>Preview All 22 UI Screens</span>
+                                <span>View all 22 screens</span>
                             </button>
                         </div>
                     </div>
@@ -1647,7 +1658,7 @@
 
                 <!-- PROJECT 3: United Distributors App -->
                 <div class="project-card" data-category="production">
-                    <div class="project-badge-top">B2B Management</div>
+                    <div class="project-badge-top">B2B</div>
                     <div class="project-img-container">
                         <div class="project-img-slider">
                             <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop" alt="United Distributors App">
@@ -1655,15 +1666,15 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
-                            <span>United Distributors – Distribution App</span>
+                            <span>United Distributors: Distribution App</span>
                         </h3>
                         <p class="project-desc">
-                            Comprehensive B2B distribution management application enabling real-time order tracking, catalog inventory, and role-based access.
+                            A B2B app for managing orders and inventory.
                         </p>
                         <ul class="project-highlights">
-                            <li>Engineered a comprehensive B2B Distribution Management App for United Distributors using Flutter and Clean Architecture.</li>
-                            <li>Implemented core modules for real-time order tracking, inventory management, and role-based access.</li>
-                            <li>Utilized Cubit for state management and local caching strategies for offline support.</li>
+                            <li>Built during my internship at United Distributors with Flutter and Clean Architecture.</li>
+                            <li>Modules for order tracking, inventory and role-based access.</li>
+                            <li>Cubit for state, with local caching for offline use.</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Flutter</span>
@@ -1692,14 +1703,14 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
-                            <span>Global News Application</span>
+                            <span>News App</span>
                         </h3>
                         <p class="project-desc">
-                            Scalable news reader application featuring real-time article fetching, dynamic keyword search, and complete RTL/LTR localization.
+                            A news reader with search and Arabic/English support.
                         </p>
                         <ul class="project-highlights">
-                            <li>Categorized news feeds with instant article caching and bookmarking.</li>
-                            <li>Full Arabic and English UI support using Easy Localization.</li>
+                            <li>News by category, with caching and bookmarks.</li>
+                            <li>Arabic (RTL) and English using Easy Localization.</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Flutter</span>
@@ -1726,14 +1737,14 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
-                            <span>Instagram UI & Social Feed</span>
+                            <span>Instagram Clone</span>
                         </h3>
                         <p class="project-desc">
-                            Pixel-perfect responsive social feed clone integrating Firebase for user posts, real-time stories, likes, and comment interactions.
+                            A social feed clone with posts, stories, likes and comments, backed by Firebase.
                         </p>
                         <ul class="project-highlights">
-                            <li>Real-time database updates via Cloud Firestore and Firebase Storage.</li>
-                            <li>Reactive state management using Flutter BLoC.</li>
+                            <li>Cloud Firestore and Firebase Storage for data and images.</li>
+                            <li>State managed with BLoC.</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Flutter</span>
@@ -1759,14 +1770,14 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
-                            <span>Restaurant & Food Ordering</span>
+                            <span>Restaurant App</span>
                         </h3>
                         <p class="project-desc">
-                            Dynamic food ordering mobile application featuring interactive menus, customized meal ingredients, and smooth onboarding workflows.
+                            A food ordering app with menus, meal customization and onboarding screens.
                         </p>
                         <ul class="project-highlights">
-                            <li>Interactive meal customization, real-time cart recalculations, and checkout flows.</li>
-                            <li>Smooth micro-animations using custom widgets and Cubit state management.</li>
+                            <li>Meal customization, cart total updates and checkout.</li>
+                            <li>Custom widgets and animations, with Cubit for state.</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Flutter</span>
@@ -1794,15 +1805,15 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">
-                            <span>E-Commerce Application</span>
+                            <span>E-Commerce App</span>
                         </h3>
                         <p class="project-desc">
-                            Production-ready mobile shopping platform featuring secure JWT authentication, dynamic product filtering, and robust cart management.
+                            A shopping app with JWT login, product filtering and a persistent cart.
                         </p>
                         <ul class="project-highlights">
-                            <li>Secure authentication flow with JWT tokens and protected routing via Go Router.</li>
-                            <li>Advanced networking using Dio with custom interceptors and error handling.</li>
-                            <li>Interactive product catalogs, custom dialogs, and persistent cart state.</li>
+                            <li>JWT login with protected routes in Go Router.</li>
+                            <li>Dio with custom interceptors and error handling.</li>
+                            <li>Product catalog, custom dialogs and cart that persists.</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">Dart</span>
@@ -1822,9 +1833,8 @@
         <!-- Technical Skills Section -->
         <section id="skills" class="section">
             <div class="section-header">
-                <span class="section-tag">Capabilities</span>
-                <h2 class="section-title">Technical Expertise</h2>
-                <p class="section-subtitle">Categorized stack of technologies, architectural methodologies, and specialized tooling applied in enterprise mobile development.</p>
+                
+                <h2 class="section-title">Skills</h2>
             </div>
 
             <div class="skills-category-grid">
@@ -1950,8 +1960,8 @@
         <!-- Education & Certifications -->
         <section id="education" class="section">
             <div class="section-header">
-                <span class="section-tag">Academic Background</span>
-                <h2 class="section-title">Education & Credentials</h2>
+                
+                <h2 class="section-title">Education</h2>
             </div>
 
             <div class="edu-grid">
@@ -1962,7 +1972,7 @@
                     <div class="edu-school">Ain Shams University, Cairo, Egypt</div>
                     <p class="edu-desc">
                         <strong>Graduation Project:</strong> Indoor Localization & Navigation System.<br>
-                        Developed a Flutter-based application to provide real-time indoor positioning using smartphone hardware sensors and localization algorithms. This solution aims to solve navigation and routing challenges in GPS-denied environments.
+                        Developed a Flutter-based application to provide real-time indoor positioning using smartphone hardware sensors and localization algorithms. It targets navigation where GPS does not work, such as inside buildings.
                     </p>
                 </div>
 
@@ -1972,7 +1982,7 @@
                     <h3 class="edu-degree">Flutter Training Program</h3>
                     <div class="edu-school">IT SHARE</div>
                     <p class="edu-desc">
-                        Intensive professional training program covering Flutter, Dart, custom widgets, state management, and enterprise application architecture.
+                        Training in Flutter, Dart, custom widgets, state management and app architecture.
                     </p>
                 </div>
             </div>
@@ -1982,14 +1992,14 @@
         <section id="contact" class="section">
             <div class="contact-card">
                 <div class="contact-info">
-                    <span class="section-tag">Let's Connect</span>
-                    <h3>Have an ambitious project or engineering role?</h3>
+                    
+                    <h3>Get in touch</h3>
                     <p>
-                        I'm always open to discussing new mobile development opportunities, enterprise architecture challenges, and collaborations on production-grade Flutter platforms.
+                        If you have a Flutter role or project to talk about, send me an email or a message.
                     </p>
                     <a href="CV.pdf" download="Mohamed Hassan Ali Mobile App Developer (Flutter).pdf" class="btn btn-primary">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Download Full CV (PDF)</span>
+                        <span>Download CV</span>
                     </a>
                 </div>
 
@@ -2001,7 +2011,7 @@
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             </div>
                             <div class="contact-item-text">
-                                <span>Email Address</span>
+                                <span>Email</span>
                                 <strong>hassanmoamed139@gmail.com</strong>
                             </div>
                         </div>
@@ -2017,7 +2027,7 @@
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             </div>
                             <div class="contact-item-text">
-                                <span>Phone Number</span>
+                                <span>Phone</span>
                                 <strong>(+20) 01102213362</strong>
                             </div>
                         </div>
@@ -2047,7 +2057,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2026 <strong>Mohamed Hassan Ali</strong>. Crafted with precision for high-performance mobile engineering.</p>
+            <p>© 2026 <strong>Mohamed Hassan Ali</strong>.</p>
         </div>
     </footer>
 
